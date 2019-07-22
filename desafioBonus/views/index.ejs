@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Word</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script language="JavaScript">       
+      function verHora(){
+      let hora = new Date();
+      let h = hora.getHours();
+      let m = hora.getMinutes();
+      let s = hora.getSeconds();
+      m = zero(m);
+      s = zero(s);
+      document.getElementById('relogio').innerHTML = h+':'+m+':'+s;
+      atualiza = setTimeout('verHora()',500);
+      }
+      function zero(x){
+      if(x < 10){
+      x = '0'+x;
+      } return x;
+      }
+    </script>
+  </head>
+  <body onload="verHora()">
+    <div class="row">
+      <div class="col-sm-2"><h1>Hello Word</h1></div>
+      <div class="col-sm-2"><p><h3 id='relogio'></h3></p></div>
+    </div>
+  </body>
+</html>

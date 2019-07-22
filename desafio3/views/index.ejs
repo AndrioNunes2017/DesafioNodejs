@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro Alunos</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div class="panel panel-default">
+          <div class="panel-heading">
+             <strong>Cadastro Alunos</strong>
+          </div>
+          <div class="panel-body">
+          <table class="table table-sm table-striped table-hover table-bordered">
+                <thead>
+                  <div class="">
+                    <h5><strong>Alunos</strong></h5>
+                  </div>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<alunos.length;i++) { %>
+                        <tr>
+                          <td><%= alunos[i]._id%></a></td>
+                          <td><%= alunos[i].nome%></td>
+                          <td><%= alunos[i].idade%></td>
+                        </tr>
+                      <% } %>
+                </tbody>
+             </table>
+         </div>
+		 <div class="panel-footer">
+			<a class="btn btn-sm btn-success" href="/AddAluno" >Adicionar</a>
+		</div>
+	</div>
+  </body>
+</html>
